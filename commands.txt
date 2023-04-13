@@ -1,0 +1,456 @@
+    1  sudo apt install bash-completion
+    2  sudo apt install software-properties-common
+    3  sudo add-apt-repository universe
+    4  sudo apt update && sudo apt install curl
+    5  sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+    6  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+    7  sudo apt update
+    8  sudo apt upgrade
+    9  sudo apt install ros-humble-desktop
+   10  sudo apt install ros-humble-ros-base
+   11  sudo apt install ros-dev-tools
+   12  sudo apt install python3-argcomplete
+   13  echo "source /opt/ros/humble/setup.bash" >> ./.bashrc
+   14  sudo apt install python3-colcon-common-extensions
+   15  sudo apt install terminator
+   16  terminator
+   17  terminator &
+   18  exit
+   19  code &
+   20  groups
+   21  sudo apt update && sudo apt upgrade -y
+   22  $ sudo apt install software-properties-common apt-transport-https wget -y
+   23  sudo apt install software-properties-common apt-transport-https wget -y
+   24  wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
+   25  echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
+   26  sudo apt update
+   27  sudo apt install code
+   28  cd
+   29  mkdir pico
+   30  cd pico
+   31  cd pico*
+   32  git submodule update --init
+   33  cd ..
+   34  git clone https://github.com/raspberrypi/pico-examples.git --branch master
+   35  sudo apt update
+   36  sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential 
+   37  cd pico-examples
+   38  mkdir build
+   39  cd build
+   40  cmake ..
+   41  ls
+   42  cd ..
+   43  cd blink
+   44  make -j4
+   45  ls
+   46  cd ..
+   47  ls
+   48  cd build
+   49  cmake ..
+   50  make -j4
+   51  ls
+   52  ls generated
+   53  ls generated/pico_base
+   54  ls generated/pico_base/pico
+   55  cd ..
+   56  ls
+   57  cd blink
+   58  ls
+   59  cd ..
+   60  cd build
+   61  ls
+   62  cd ..
+   63  rm -rf build
+   64  ls
+   65  cd pio
+   66  ls
+   67  cd ..
+   68  code &
+   69  cd build
+   70  ls
+   71  cd hello_world
+   72  ls
+   73  mkdir build
+   74  cd build 
+   75  make ..
+   76  ls ..
+   77  cmake ..
+   78  cd ..
+   79  rm -rf build
+   80  cd ..
+   81  ls
+   82  cd hello*
+   83  mkdir build
+   84  cd build
+   85  cmake ..
+   86  ls ..
+   87  cd ..
+   88  ls
+   89  rm build*
+   90  rm -r build*
+   91  ls
+   92  cd
+   93  cd pico
+   94  ls
+   95  cd pico-examples
+   96  ls
+   97  cd build
+   98  mkdir build
+   99  cd build
+  100  mkdir hello_world
+  101  ls ../..
+  102  ls ..
+  103  ls
+  104  cd hello_world
+  105  cd ..
+  106  cmake ..
+  107  ls
+  108  cd hello_world
+  109  ls
+  110  make -j4
+  111  ls
+  112  cd usb
+  113  ls
+  114  ls /dev/tty*
+  115  minicom -b 115200 -o -D /dev/ttyACM0
+  116  ls /dev/tty*
+  117  minicom -b 115200 -o -D /dev/ttyACM0
+  118  ls /dev/tty*
+  119  minicom -b 115200 -o -D /dev/ttyACM0
+  120  ls /dev/tty*
+  121  sudo apt install putty
+  122  putty
+  123  sudo usermod -a -G dialout $USER
+  124  groups
+  125  sudo reboot now
+  126  ls
+  127  cd pico
+  128  ls
+  129  mkdir pico-development
+  130  ls
+  131  cd pico-examples
+  132  ls
+  133  cd
+  134  ls
+  135  ls -al
+  136  vi .bashrc
+  137  groups
+  138  minicom -b 115200 -o -D /dev/ttyACM0
+  139  cd
+  140  pwd
+  141  cd /home/nn/pico/pico-sdk
+  142  set
+  143  echo $PICO_SDK_PATH=
+  144  ls
+  145  vi .bashrc
+  146  echo $PICO_SDK_PATH
+  147  cd pico
+  148  pico-development
+  149  ls
+  150  cd pico-development
+  151  ls
+  152  mkdir build
+  153  cd build
+  154  cmake ..
+  155  cd hello*
+  156  ls
+  157  make -j4
+  158  ls /dev/tty*
+  159  minicom -b 115200 -o -D /dev/ttyACM0
+  160  code &
+  161  cd ..
+  162  cd bus_scan
+  163  ls
+  164  make 
+  165  cd ..
+  166  cmake ..
+  167  cd bus_scan
+  168  make 
+  169  cd pico
+  170  cd pico_development
+  171  ls
+  172  cd pico-development
+  173  cd build
+  174  cmake ..
+  175  cd hello*
+  176  make
+  177  ls /dev/tty*
+  178  minicom -b 115200 -o -D /dev/ttyACM0
+  179  cd /
+  180  ls
+  181  ls lib
+  182  cd /
+  183  sudo find . -type f -name "pico/stdlib.h"
+  184  sudo find . -type f -name "stdlib.h"
+  185  ls
+  186  sudo find etc -type f -name "stdlib.h"
+  187  sudo find etc/. -type f -name "stdlib.h"
+  188  sudo find ./etc/. -type f -name "stdlib.h"
+  189  cd etc; sudo find . -type f -name "stdlib.h"
+  190  cd ..
+  191  cd home; sudo find . -type f -name "stdlib.h"
+  192  cd nn/pico/pico-sdk/src/
+  193  ls
+  194  minicom -b 115200 -o -D /dev/ttyACM0
+  195  cd build
+  196  cmake ..
+  197  cd bus*
+  198  make
+  199  cd ..
+  200  cmake ..
+  201  cd bus_scan
+  202  make
+  203  cd ..; cmake .. ; cd bus_scan; make
+  204  cd pico
+  205  git clone https://github.com/fhdm-dev/pico-arduino-compat.git
+  206  ls
+  207  cd pico-ardu*
+  208  git submodule update --init arduino-compat/arduino-pico
+  209  ls
+  210  cd libs
+  211  cd ina*
+  212  ls
+  213  ls ina*
+  214  cd ina219b
+  215  ls
+  216  ./init.sh
+  217  cd ..
+  218  ls adafruit*
+  219  ls adafruit-ina*
+  220  cd ina219b
+  221  ls
+  222  rm -rm INA219B
+  223  rm -rf INA219B
+  224  cd ..
+  225  cd Adafruit-ina*
+  226  ls adafruit(
+  227  ls adafruit*
+  228  ls adafruit-ina219
+  229  cd adafruit-ina219
+  230  ./init.sh
+  231  ls
+  232  curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+  233  ls /dev/tty
+  234  ls /dev/tty*
+  235  ls /
+  236  cd /media
+  237  ls
+  238  cd nn
+  239  ls
+  240  cd RPI-RP2
+  241  ls
+  242  ls /dev/tty
+  243  ls /dev/tty*
+  244  cd
+  245  ls
+  246  cd .platformio
+  247  ls
+  248  cd penv
+  249  ls
+  250  cd bin
+  251  ls
+  252  pio
+  253  ./pio
+  254  ./pio upgrade
+  255  ln -s ~/.platformio/penv/bin/platformio ~/.local/bin/platformio
+  256  ln -s ~/.platformio/penv/bin/pio ~/.local/bin/pio
+  257  ln -s ~/.platformio/penv/bin/piodebuggdb ~/.local/bin/piodebuggdb
+  258  cd 
+  259  cd .local
+  260  cd bin
+  261  mkdir bin
+  262  ln -s ~/.platformio/penv/bin/platformio ~/.local/bin/platformio
+  263  ln -s ~/.platformio/penv/bin/pio ~/.local/bin/pio
+  264  ln -s ~/.platformio/penv/bin/piodebuggdb ~/.local/bin/piodebuggdb
+  265  cd
+  266  ls -al .*
+  267  ls -al
+  268  vi .bashrc
+  269  apt install -y git cmake python3-pip
+  270  sudo apt install -y git cmake python3-pip
+  271  sudo reboot now
+  272  pio run --target clean_microros  # Clean library
+  273  pio lib install 
+  274  pio pkg install 
+  275  pio run
+  276  pio run --target clean_microros  # Clean library
+  277  pio pkg install 
+  278  pio run
+  279  pip list | grep setuptools
+  280  code &
+  281  $ip
+  282  ip
+  283  ip all
+  284  ip -all
+  285  ip a
+  286  sudo shutdown now
+  287  ip -a
+  288  ip a
+  289  code &
+  290  top
+  291  ls /media/nn/
+  292  ls
+  293  top
+  294  ls /dev/tty*
+  295  lsb_release -a
+  296  pip install --upgrade pip
+  297  ls
+  298  cd Documents
+  299  ls
+  300  cd PlatformIO
+  301  ls
+  302  cd Projects
+  303  ls
+  304  mv urostest-pico microros-test
+  305  ls
+  306  mv microros-test uros-test
+  307  board_build.partitions = no_ota.csv
+  308  git clone git@bitbucket.org:arcona/microros-test.git
+  309  cat ~/.ssh/id_rsa.pub | pbcopy
+  310  sudo apt install pbcopy
+  311  cat ~/.ssh/id_rsa.pub 
+  312  sudo apt update && sudo apt install openssh-client
+  313  eval $(ssh-agent)
+  314  cd
+  315  ssh-keygen 
+  316  cat ~/.ssh/id_rsa.pub 
+  317  cd Documents
+  318  cd PlatformIO
+  319  ls
+  320  cd Projects
+  321  ls
+  322  git clone git@bitbucket.org:arcona/microros-test.git
+  323  ls
+  324  cd uros-test
+  325  ls
+  326  cat *.ini
+  327  ls
+  328  cp platform.ini ../microros-test
+  329  cp platform.ini ../microros-test/
+  330  ls
+  331  cp platformio.ini ../microros-test/
+  332  cd src
+  333  cd ..
+  334  cd microros-test
+  335  ls
+  336  mkdir src
+  337  cd src
+  338  cp ../../urostest-test/src/main.cpp .
+  339  ls ../../uros-test/src
+  340  cp ../../uros-test/src/main.cpp .
+  341  cd ..
+  342  git config
+  343  git config --global user.name 'niels norgaard"
+  344  git config --global user.na"e 'niels norgaard"
+  345  d"
+  346  c
+  347  ls
+  348  git config --global user.name 'niels norgaard'
+  349  git config --global user.email 'niels.norgaard@live.dk'
+  350  cd Documents
+  351  cat ~/.ssh/id_rsa.pub 
+  352  eval $(ssh-agent)
+  353  concol
+  354  concon
+  355  cd
+  356  ls
+  357  cd Documents
+  358  ls
+  359  vi .bashrc
+  360  cd 
+  361  vi .bashrc
+  362  colcon
+  363  ls /usr/share/
+  364  source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+  365  cd 
+  366  ls
+  367  cd Documents
+  368  ls
+  369  cd ..
+  370  ls
+  371  vi .bashrc
+  372  ssh niels@tiny
+  373  ping tiny
+  374  ssh 192.168.0.19
+  375  ping 192.168.0.19
+  376  cd
+  377  ls
+  378  vi .bashrc
+  379  ros2
+  380  pio run
+  381  ros2 run demo_nodes_py listener
+  382  ip addr
+  383  git remote
+  384  git push origin
+  385  ip addr
+  386  ros2 run demo_nodes_py listener
+  387  vi .bashrc
+  388  ros2 run demo_nodes_py talker
+  389  ssh niels@tiny
+  390  ssh niels@192.168.0.19
+  391  ip addr
+  392  ping www.teradata.com
+  393  ping 192.168.0.186
+  394  ping 192.168.0.19
+  395  ros2 run demo_nodes_py listener
+  396  git clone https://github.com/curiores/SerialAnalyzer.git
+  397  cd Serial*
+  398  ls
+  399  yarn electron:package:linux
+  400  sudo apt install cmdtest
+  401  yarn electron:package:linux
+  402  ls
+  403  cd src
+  404  ls
+  405  cd utils
+  406  cd Utils
+  407  ls
+  408  cd ..
+  409  vi App.js
+  410  ls
+  411  cd 
+  412  ls
+  413  cd DOcuments
+  414  cd
+  415  cd Documents
+  416  ls
+  417  cd PlatformIO
+  418  ls
+  419  cd Projects
+  420  ls
+  421  ros2
+  422  rviz2
+  423  ls
+  424  vi .bashrc
+  425  exit
+  426  xclock
+  427  rviz2
+  428  exit
+  429  vi .bashrc
+  430  exit
+  431  ros2 run demo_nodes_py talker
+  432  set
+  433  printenv
+  434  printenv | grep ROS
+  435  exit
+  436  ip addr
+  437  sudo apt install openssh-server
+  438  sudo systemctl status ssh
+  439  sudo ufw allow ssh
+  440  ssh -X niels@192.168.0.19
+  441  rviz2
+  442  exit
+  443  ros2 run tf2_ros static_transform_publisher 2 1 0 0.785 0 0 world robot_1
+  444  ros2 run demo_nodes_py listener
+  445  exit
+  446  printenv | grep ROS
+  447  ros2 run demo_nodes_py listener
+  448  rviz2
+  449  rviz2 &
+  450  ros2 run joint_state_publisher_gui joint_state_publisher_gui
+  451  sudo apt install ros-foxy-xacro ros-foxy-joint-state-publisher-gui
+  452  sudo apt install ros-humble-xacro ros-humble-joint-state-publisher-gui
+  453  ros2 run joint_state_publisher_gui joint_state_publisher_gui
+  454  history 10
+  455  history 1000
+  456  history 1000 > commands.log
